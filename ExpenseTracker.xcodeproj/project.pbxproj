@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57FBE642AD1510600D5F38F /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57FBE632AD1510600D5F38F /* AddView.swift */; };
 		B5CF78DA2ACED56800B42C23 /* ExpenseTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF78D92ACED56800B42C23 /* ExpenseTrackerApp.swift */; };
 		B5CF78DC2ACED56800B42C23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CF78DB2ACED56800B42C23 /* ContentView.swift */; };
 		B5CF78DE2ACED56900B42C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF78DD2ACED56900B42C23 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B57FBE632AD1510600D5F38F /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		B5CF78D62ACED56800B42C23 /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF78D92ACED56800B42C23 /* ExpenseTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTrackerApp.swift; sourceTree = "<group>"; };
 		B5CF78DB2ACED56800B42C23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				B5CF78D92ACED56800B42C23 /* ExpenseTrackerApp.swift */,
 				B5CF78DB2ACED56800B42C23 /* ContentView.swift */,
+				B57FBE632AD1510600D5F38F /* AddView.swift */,
 				B5CF78E72ACED63800B42C23 /* ExpenseItem.swift */,
 				B5CF78E92ACED68700B42C23 /* Expenses.swift */,
 				B5CF78DD2ACED56900B42C23 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				B5CF78EA2ACED68700B42C23 /* Expenses.swift in Sources */,
 				B5CF78DC2ACED56800B42C23 /* ContentView.swift in Sources */,
+				B57FBE642AD1510600D5F38F /* AddView.swift in Sources */,
 				B5CF78E82ACED63800B42C23 /* ExpenseItem.swift in Sources */,
 				B5CF78DA2ACED56800B42C23 /* ExpenseTrackerApp.swift in Sources */,
 			);
