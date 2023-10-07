@@ -8,6 +8,8 @@
 import Foundation
 
 class Expenses: ObservableObject {
+    @Published var loadCurrency = Locale.current.currency?.identifier ?? "USD"
+    @Published var expenseTypes = ["Business", "Personal"]
     @Published var items = [ExpenseItem]() {
         didSet {
             
@@ -26,5 +28,15 @@ class Expenses: ObservableObject {
             }
         }
         items = []
+    }
+    
+    
+    func addItem(name: String, type: String, amount:Double) {
+        let item = ExpenseItem(name: name, type: type, amount: amount)
+        self.items.append(item)
+    }
+    
+    func removeItems(at offsets: IndexSet) {
+        self.items.remove(atOffsets: offsets)
     }
 }

@@ -11,13 +11,31 @@ struct ContentView: View {
     @StateObject var expenses = Expenses()
     @State private var showingAddExpenxe = false
     
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) {item in
-                    Text(item.name)
+                ForEach(expenses.expenseTypes, id: \.self) {type in
+                    
+                    Section(type){
+                        ForEach(expenses.items) { item in
+                            if item.type == type {
+                                HStack {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    
+                                    Spacer()
+                                    
+                                    Text(item.amount, format: .currency(code: expenses.loadCurrency))
+                                        .foregroundStyle(item.amount < 10 ? Color.green : (item.amount < 100 ? Color.orange : Color.red))
+                                }
+                            }
+                        }
+                        .onDelete(perform: expenses.removeItems)
+                    }
+                    
                 }
-                .onDelete(perform: removeItems)
+                
             }
             .navigationTitle("Expense Tracker")
             .toolbar{
@@ -29,12 +47,8 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $showingAddExpenxe){
-             AddView(expenses: expenses)
+            AddView(expenses: expenses)
         }
-    }
-    
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
     }
 }
 
